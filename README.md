@@ -20,4 +20,8 @@ Das **Command Pattern** ist ein Verhaltensmuster der Softwarearchitektur, das da
   Das Licht was an und ausgeht, hier sind die beiden Aktionen (Licht an/aus) festgelegt.
 
 
+## Mit der Verwendung des Command Patterns könnte man das ganze weiter skalieren auf andere Anwendungsfälle ohne dass das System bricht, z. B. in dem man in den RemoteControl auch die Möglichkeit zur Kontrolle von Sound etc. einbaut, siehe Grafik:
+
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/7101450f-9a86-4d96-b6ed-9bedbed667d7" />
+
+## Alternative Pattern
