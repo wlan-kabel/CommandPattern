@@ -1,4 +1,10 @@
+package beans;
+
 public class Light {
+
+    public Light() {
+    }
+
     public void on() {
         System.out.println("Licht ist AN");
     }

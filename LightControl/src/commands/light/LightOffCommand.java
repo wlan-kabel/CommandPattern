@@ -1,5 +1,10 @@
+package commands.light;
+
+import beans.Light;
+import commands.Command;
+
 public class LightOffCommand implements Command {
-    private Light light;
+    private final Light light;
 
     public LightOffCommand(Light light) {
         this.light = light;

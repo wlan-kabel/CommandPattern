@@ -1,3 +1,7 @@
+package beans;
+
+import commands.Command;
+
 public class RemoteControl {
     private Command slot;
 
