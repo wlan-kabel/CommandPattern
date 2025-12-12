@@ -1,4 +1,4 @@
-# Light Control: Command Pattern
+# House Control: Command Pattern
 
 Das **Command Pattern** ist ein Verhaltensmuster der Softwarearchitektur, das dazu dient, Anfragen als Objekte zu kapseln. Dadurch wird die Entkopplung zwischen dem Objekt, das eine Aktion auslöst, und dem Objekt, das die Aktion ausführt, erreicht.
 
