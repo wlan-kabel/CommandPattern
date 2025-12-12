@@ -15,7 +15,7 @@ Das **Command Pattern** ist ein Verhaltensmuster der Softwarearchitektur, das da
 - **RemoteControl**  
   Hier wird der Command gesetzt und ausgeführt.
 - **Room**
-  Jeder Raum hat einen Identifikationsnamen um das Licht nur im entsprechenden Raum anzuschalten
+  Jeder Raum hat einen Identifikationsnamen um das Licht nur im entsprechenden Raum anzuschalten, he has children such as living room, bed room, kithchen, ...
 - **Light**
   Das Licht was an und ausgeht, hier sind die beiden Aktionen (Licht an/aus) festgelegt.
 
@@ -26,6 +26,8 @@ Mit der Verwendung des Command Patterns könnte man das ganze weiter skalieren a
 
 - **Air Conditioning**
   In der Erweiterung lässt sich nun auch die Klimaanlage updaten.
+
+- **Sound** and whatever other use case Tobi can find
 
 ## Anti-Pattern Chain of Responsibility (CoR):
 Beim Chain of Responsibility wandern Anfragen durch eine Kette von Handlern, bis einer sie verarbeitet
