@@ -1,6 +1,6 @@
 public class Main{
     public static void main() {
-// Receiver
+        // Receiver
         Light livingRoomLight = new Light();
 
         // Commands
