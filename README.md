@@ -1,6 +1,6 @@
 # Light Control: Command Pattern
 
-Das **Command Pattern** ist ein Verhaltensmuster der Softwarearchitektur, das dazu dient, Anfragen als Objekte zu kapseln. Dadurch wird die Entkopplung zwischen dem Objekt, das eine Aktion auslöst (Invoker), und dem Objekt, das die Aktion ausführt (Receiver), erreicht.
+Das **Command Pattern** ist ein Verhaltensmuster der Softwarearchitektur, das dazu dient, Anfragen als Objekte zu kapseln. Dadurch wird die Entkopplung zwischen dem Objekt, das eine Aktion auslöst, und dem Objekt, das die Aktion ausführt, erreicht.
 
 ## Ziel des Patterns
 - Aktionen sollen wie Objekte behandelt werden.
@@ -20,8 +20,23 @@ Das **Command Pattern** ist ein Verhaltensmuster der Softwarearchitektur, das da
   Das Licht was an und ausgeht, hier sind die beiden Aktionen (Licht an/aus) festgelegt.
 
 
-## Mit der Verwendung des Command Patterns könnte man das ganze weiter skalieren auf andere Anwendungsfälle ohne dass das System bricht, z. B. in dem man in den RemoteControl auch die Möglichkeit zur Kontrolle von Sound etc. einbaut, siehe Grafik:
+Mit der Verwendung des Command Patterns könnte man das ganze weiter skalieren auf andere Anwendungsfälle ohne dass das System bricht, z. B. in dem man in den RemoteControl auch die Möglichkeit zur Kontrolle von Sound etc. einbaut, siehe Grafik:
 
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/7101450f-9a86-4d96-b6ed-9bedbed667d7" />
 
-## Alternative Pattern
+- **Air Conditioning**
+  In der Erweiterung lässt sich nun auch die Klimaanlage updaten.
+
+## Anti-Pattern Chain of Responsibility (CoR):
+Beim Chain of Responsibility wandern Anfragen durch eine Kette von Handlern, bis einer sie verarbeitet
+``handler1.setNext(handler2).setNext(handler3);``
+``handler1.handle(request);``
+
+Für Light-Commands wie LightOn, LightOff, Dim ist das unnötig komplex und ineffizient, weil:
+
+- Die Aktion wird immer genau einem Empfänger zugeordnet, somit keine Notwendigkeit für eine „Kette“.
+- CoR macht die Ausführung indirekt, statt klar ein bestimmtes Kommando auszuführen.
+
+- Fehleranfällig, wenn mehrere Handler eine Anfrage abfangen könnten.
+
+- Keine einfache Undo/Redo-Unterstützung wie im Command Pattern. 
